@@ -1,0 +1,23 @@
+.textboxstyle {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.namestextbox {
+  background-color: beige;
+  margin-top: 20px;
+
+}
+.bodystyle {
+background-color: grey;
+}
+h1 {
+  font-size: 80px;
+  font-style: italic;
+}
+.greetmediv {
+ margin-top: 20px;
+}
+.box {
+  background-color: blue;
+}
