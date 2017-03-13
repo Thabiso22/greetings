@@ -13,8 +13,8 @@ var namesGreeted = {};
 
 
 if (countStore) {
-  count = Number(countStore);
-  counter.innerHTML = count;
+    count = Number(countStore);
+    counter.innerHTML = count;
 }
 
 
@@ -23,10 +23,10 @@ if (countStore) {
 
 
 
-function add(){
- a = 0;
- document.getElementById('counting').innerHTML = count=0;
- }
+function add() {
+    a = 0;
+    document.getElementById('counting').innerHTML = count = 0;
+}
 
 
 
@@ -34,40 +34,52 @@ function add(){
 
 
 btnResults.addEventListener("click", function() {
-            //var results = "";
-            var language = document.getElementsByName("language");
-           for (var i = 0; i < language.length; i++) {
-
-                if (language[0].checked) {
-                    //document.querySelector(".boxResults");
-                    messageResults.innerHTML = "Hello " + input.value;
-                } else if (language[1].checked) {
-                    //document.querySelector(".boxResults");
-                    messageResults.innerHTML = "Hallo " + input.value;
-                } else if (language[2].checked) {
-                    //document.querySelector(".boxResults");
-                    messageResults.innerHTML = "Molo " + input.value;
-                }
-
-              }
-//document.getElementById("counting").innerHTML = count;
-                 count += 1;
-                 localStorage.setItem("count",count);
-                 counter.innerHTML=count;
+    //var results = "";
+    var language = document.getElementsByName("language");
+    for (var i = 0; i < language.length; i++) {
 
 
+        if (language[0].checked) {
+            //document.querySelector(".boxResults");
+            messageResults.innerHTML = "Hello " + input.value;
+        } else if (language[1].checked) {
+            //document.querySelector(".boxResults");
+            messageResults.innerHTML = "Hallo " + input.value;
+        } else if (language[2].checked) {
+            //document.querySelector(".boxResults");
+            messageResults.innerHTML = "Molo " + input.value;
+        }
 
-                 var userName = input.value;
-                 if (namesGreeted[userName] === undefined){
-                    greetingsCounter++;
+    }
 
-                    namesGreeted[userName] = 0;
-
-                    userName.innerHTML = greetingsCounter;
-                 }
+  //  count += 1;
+    localStorage.setItem("count", count);
+    counter.innerHTML = count;
 
 
+var userName = input.value;
+
+    if (namesGreeted[userName] === undefined) {
+        count+=1;
+
+        namesGreeted[userName] = userName;
+        input.innerHTML = userName;
+
+    } else if (namesGreeted[userName] !== undefined) {
 
 
- });
+        //namesGreeted[userName] = userName;
+
+        input.innerHTML = userName;
+    }
+
+
+
+
+
+
+
+
+
+});
 //
